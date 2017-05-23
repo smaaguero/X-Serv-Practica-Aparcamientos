@@ -1,0 +1,170 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-05-23 17:54+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: pFinalSat/settings.py:94
+msgid "English"
+msgstr ""
+
+#: pFinalSat/settings.py:95
+msgid "Spanish"
+msgstr ""
+
+#: parking/views.py:16
+msgid "Page of: "
+msgstr "Pagina de: "
+
+#: parking/views.py:16
+msgid "Information websites: "
+msgstr "Páginas de información: "
+
+#: parking/views.py:16
+msgid "Selected"
+msgstr "Seleccionado"
+
+#: parking/views.py:16
+msgid "Not Selected"
+msgstr "No Seleccionado"
+
+#: .\templates\home\home.html:3
+msgid "Find your place Anywhere"
+msgstr "Encuentra tu lugar en cualquier sitio"
+
+#: .\templates\home\home.html:3
+msgid "Main Page"
+msgstr "Página Principal"
+
+#: .\templates\home\home.html:3
+msgid "Parkings"
+msgstr "Aparcamientos"
+
+#: .\templates\home\home.html:3
+msgid "About"
+msgstr "Sobre"
+
+
+#: .\templates\home\home.html:3
+msgid "Selection date: "
+msgstr "Fecha de selección: "
+
+#: .\templates\home\home.html:3
+msgid "CSS background"
+msgstr "Fondo del css"
+
+#: .\templates\home\home.html:3
+msgid "CSS size"
+msgstr "Tamaño de CSS"
+
+#: .\templates\home\home.html:3
+msgid "Title of your page"
+msgstr "Título de tu pagina"
+
+#: .\templates\home\home.html:3
+msgid "Sign in"
+msgstr "Acceso"
+
+#: .\templates\home\home.html:3
+msgid "Username"
+msgstr "Usuario"
+
+
+#: .\templates\home\home.html:3
+msgid "Description of the parking:"
+msgstr "Descripción del aparcamiento:"
+
+#: .\templates\home\home.html:3
+msgid "Punctuation: "
+msgstr "Puntuación: "
+
+#: .\templates\home\home.html:3
+msgid "Phone: "
+msgstr "Teléfono: "
+
+#: .\templates\home\home.html:3
+msgid "Contact: "
+msgstr "Contacto: "
+
+#: .\templates\home\home.html:3
+msgid "Latitude: "
+msgstr "Latitud: "
+
+#: .\templates\home\home.html:3
+msgid "Longitude: "
+msgstr "Longitud: "
+
+
+#: .\templates\home\home.html:3
+msgid "Comment"
+msgstr "Comentario"
+
+#: .\templates\home\home.html:3
+msgid "Enter Comment"
+msgstr "Introducir Usuario"
+
+#: .\templates\home\home.html:3
+msgid "Send"
+msgstr "Enviar"
+
+#: .\templates\home\home.html:3
+msgid "Users"
+msgstr "Usuarios"
+
+#: .\templates\home\home.html:3
+msgid "Password"
+msgstr "Contraseña"
+
+#: .\templates\home\home.html:3
+msgid "Enter"
+msgstr "Introducir"
+
+#: .\templates\home\home.html:3
+msgid "Enter district"
+msgstr "Introducir distrito"
+
+#: .\templates\home\home.html:3
+msgid "Located on the hood: "
+msgstr "Situado en el barrio: "
+
+#: .\templates\home\home.html:3
+msgid " in the district "
+msgstr " en el distrito "
+
+#: .\templates\home\home.html:3
+msgid "Parking Information"
+msgstr "Información de Aparcamientos"
+
+#: .\templates\home\home.html:3
+msgid "More Info"
+msgstr "Más Información"
+
+#: .\templates\home\home.html:3
+msgid "Accessibility"
+msgstr "Accesibilidad"
+
+#: .\templates\home\home.html:3
+msgid "This application uses data from the open data portal of the city of Madrid"
+msgstr "Esta aplicacion utiliza datos del portal de datos abiertos de la ciudad de Madrid"
+
+#: .\templates\home\home.html:3
+msgid "Get Info from the Database"
+msgstr "Obtener Información de la Base de Datos"
+
+#: .\templates\home\home.html:3
+msgid "User List"
+msgstr "Lista de Usuarios"

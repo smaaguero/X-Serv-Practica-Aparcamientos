@@ -1,0 +1,38 @@
+{% extends "skelleton.html" %}
+{% load i18n %}
+
+{% block content %}
+    <h5 class = "w3-margin ">
+        {{contenido|safe}}
+    </h5>
+    {% for parkingSelected in parkings %}
+        <h5>
+            <br>
+            {{parkingSelected.parking.name}}
+            </br>
+        </h5>
+        {% trans "Located on the hood: " %} {{parkingSelected.parking.neighborhood}}
+        {% trans " in the district " %} {{parkingSelected.parking.district}} <br>
+        {% trans "Contact: " %}<br>
+        {% trans "Phone: " %} {{parkingSelected.parking.phoneNumber}}
+         Mail: {{parkingSelected.parking.mail}}<br>
+        {% trans "Selection date: " %} {{parkingSelected.parking.date}}
+    {% endfor %}
+{% endblock %}
+
+{% block comment %}
+    {% ifequal usuario userPath %}
+        <form action="/css" method="post" align="right">
+            {% csrf_token %}
+            <label><b>{% trans "CSS background" %}</b></label>
+            <input type="text" placeholder="{% trans "CSS background" %}" name="background" required>
+            <br>
+            <label><br>{% trans "CSS size" %}</b></label>
+            <input type="text" placeholder="{% trans "CSS size" %}" name="size" required>
+            <br>
+            <label><br>{% trans "Title of your page" %}</b></label>
+            <input type="text" placeholder="{% trans "Title of your page" %}" name="title" required>
+            <br><button type="submit">{% trans "Send" %}</button>
+        </form>
+    {% endifequal %}
+{% endblock %}

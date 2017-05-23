@@ -1,0 +1,20 @@
+{
+    "parkings": {
+        {% for parking in parkings%}
+        {
+            "idNumber": "{{parking.idNumber}}"
+            "name": "{{parking.name}}"
+            "description": "{{parking.description}}"
+            "url": "{{parking.url}}"
+            "phoneNumber": "{{parking.phoneNumber}}"
+            "mail": "{{parking.mail}}"
+            "latitude": "{{parking.latitude}}"
+            "longitude": "{{parking.longitude}}"
+            "neighborhood": "{{parking.neighborhood}}"
+            "district": "{{parking.district}}"
+            "accessibility": "{{parking.accessibility}}"
+            "numberOfComments": "{{parking.numberOfComments}}"
+        },
+        {% endfor %}
+    }
+}

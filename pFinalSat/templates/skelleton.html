@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<title>OpenParking</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="http://www.openparking.co.uk/siteimages/openparking-logo.png">
+<link rel="stylesheet" href="http://localhost:1234/prueba.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif, text-align: "center"}
+.w3-bar,h1,button {font-family: "Montserrat", sans-serif}
+.fa-user,.fa-car {font-size:200px;text-align: left}
+#outerdiv {width: 90%; height: 90%; position:fixed; text-align:center}
+#map {width: 70%; height: 100%; margin:0px auto; display:inline-block}
+</style>
+<body class="prueba">
+
+
+{% load i18n %}
+<!-- Navbar -->
+<nav class="w3-top">
+    <div class="w3-bar my-purplestrong2 w3-card-2 w3-left-align w3-large">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large my-greenstrong" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+        <a href="/" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">{% trans "Main Page" %}</a>
+        <a href="/aparcamientos" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">{% trans "Parkings" %}</a>
+        <a href="/about" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">{% trans "About" %}</a>
+    </div>
+</nav>
+
+<!-- Header -->
+<header class="w3-container my-purple w3-center" style="padding:70px 16px">
+    <img id="logo" src="http://www.openparking.co.uk/siteimages/openparking-logo.png"></img>
+    <div id="usuario">
+        {% if usuario %}
+            <h3><a href=http://localhost:1234/{{usuario}}> {{usuario}}</a></h3>
+            <a href='/logout'>Logout</a><br>
+        {% else %}
+            <h3>{% trans "Sign in" %}</h3>
+            <form action="/login" method="post" align=right>
+                {% csrf_token %}
+                <div class="container">
+                    <label><b>{% trans "Username" %}</b></label>
+                    <input type="text" placeholder= {% trans "Enter" %} name="username" requiorange>
+                    <br>
+                    <label><br>{% trans "Password" %}</b></label>
+                    <input type="password" placeholder= {% trans "Enter" %} name="password" requiorange>
+                    <br><button type="submit" class="my-palo">Login</button>
+                </div>
+            </form>
+        {% endif%}
+    </div>
+    <h1 align = left>{% trans "Find your place Anywhere" %}</h1>
+</header>
+
+<!-- First Grid -->
+<section class="w3-row-padding w3-padding-64 w3-container">
+    <article class="w3-content">
+        <div>
+            {% block button %}{% endblock %}
+            {% block content %}{% endblock %}
+            {% block comment %}{% endblock %}
+        </div>
+        <div class="w3-third w3-center">
+            <i class="fa fa-car w3-padding-64 my-text-green w3-margin-right"></i>
+        </div>
+    </article>
+</section>
+
+{% block formComment %}{% endblock %}
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-64 w3-center w3-opacity w3-black"style="width:100%">
+    <div class="w3-xlarge w3-padding-32">
+        <i class="fa fa-facebook-official w3-hover-opacity"></i>
+        <i class="fa fa-instagram w3-hover-opacity"></i>
+        <i class="fa fa-snapchat w3-hover-opacity"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+        <i class="fa fa-twitter w3-hover-opacity"></i>
+        <i class="fa fa-linkedin w3-hover-opacity"></i>
+    </div>
+    <h1>{% trans "This application uses data from the open data portal of the city of Madrid" %}</h1>
+</footer>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{% extends "skelleton.html" %}
+{% load i18n %}
+
+{% block content %}
+<h1>{% trans "Parking Information" %}</h1>
+<h5 text-align="left">{{contenido|safe}}</h5>
+{% endblock %}
+{% block button %}
+<form action="{{request.path}}" method="post" align="center">
+    {% csrf_token %}
+    <input type="text" placeholder= "{% trans "Enter district" %}" name="district" required>
+    <br><button type="submit">{% trans "Send" %}</button>
+</form>
+{% endblock %}

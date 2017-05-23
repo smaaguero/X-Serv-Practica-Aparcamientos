@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+
+<rss version="2.0">
+    <channel>
+        <title>CANAL RSS</title>
+        <description>Lista de comentarios</description>
+        {% for h in comments %}
+            <comment>
+                <nameParking>{{ h.parking.name }}</nameParking>
+                <urlParking> http://localhost:8000/aparcamientos/{{ h.parking.id }}</urlParking>
+                <content>{{ h.content }}</content>
+            </comment>
+        {% endfor %}
+    </channel>
+</rss>

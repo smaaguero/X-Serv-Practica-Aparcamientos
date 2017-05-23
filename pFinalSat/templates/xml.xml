@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Contenido>
+    {% for parkingSelected in parkingsSelected %}
+        <parking>
+            <idNumber>{{parkingSelected.parking.idNumber}}</idNumber>
+            <description>{{parkingSelected.parking.description}}</description>
+            <url>{{parkingSelected.parking.url}}</url>
+            <phoneNumber>{{parkingSelected.parking.phoneNumber}}</phoneNumber>
+            <mail>{{parkingSelected.parking.mail}}</mail>
+            <latitude>{{parkingSelected.parking.latitude}}</latitude>
+            <longitude>{{parkingSelected.parking.longitude}}</longitude>
+            <neighborhood>{{parkingSelected.parking.neighborhood}}</neighborhood>
+            <district>{{parkingSelected.parking.district}}</district>
+            <accessibility>{{parkingSelected.parking.accessibility}}</accessibility>
+            <numberOfComments>{{parkingSelected.parking.numberOfComments}}</numberOfComments>
+        </parking>
+    {% endfor %}
+</Contenido>

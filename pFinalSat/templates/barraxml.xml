@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Contenido>
+    {% for parking in parkings %}
+        <parking>
+            <idNumber>{{parking.idNumber}}</idNumber>
+            <description>{{parking.description}}</description>
+            <url>{{parking.url}}</url>
+            <phoneNumber>{{parking.phoneNumber}}</phoneNumber>
+            <mail>{{parking.mail}}</mail>
+            <latitude>{{parking.latitude}}</latitude>
+            <longitude>{{parking.longitude}}</longitude>
+            <neighborhood>{{parking.neighborhood}}</neighborhood>
+            <district>{{parking.district}}</district>
+            <accessibility>{{parking.accessibility}}</accessibility>
+            <numberOfComments>{{parking.numberOfComments}}</numberOfComments>
+        </parking>
+    {% endfor %}
+</Contenido>

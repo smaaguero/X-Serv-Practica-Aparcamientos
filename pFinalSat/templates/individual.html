@@ -1,0 +1,75 @@
+{% extends "skelleton.html" %}
+{% load i18n %}
+
+{% block content %}
+    <h1>Información de Aparcamiento</h1>
+    <h5 text-align="left">
+        {{parking.name}}
+        <br>
+        {% trans "Description of the parking:" %}
+        <br>
+        {{parking.description}}
+        <br>
+        {% trans "Located on the hood: " %} {{parking.neighborhood}} {% trans " in the district " %}  {{parking.district}}
+        <br>
+        <br>
+        {% trans "Accessibility" %}: {{parking.accessibility}}
+        <br>
+        {% trans "Latitude: " %} {{parking.latitude}}
+        {% trans "Longitude: " %} {{parking.longitude}}
+        <br>
+        {% trans "Punctuation: " %} {{parking.punctuation}}
+        <br>
+        {% trans "Contact: " %} <br>
+        {% trans "Phone: " %} {{parking.phoneNumber}}
+        Mail:  {{parking.mail}}
+    </h5>
+{% endblock %}
+{% block comment %}
+    <table class="table table-inverse">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>{% trans "Comment" %}</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for comment in comments %}
+                <tr>
+                    <th scope="row">
+                        {{forloop.counter}}
+                    </th>
+                    <td>
+                        {{comment.content}}
+                    </td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
+{% block formComment %}
+    {% if usuario %}
+        <form action="{{request.path}}" method="post" align="center">
+            {% csrf_token %}
+            <label><b>{% trans "Comment" %}</b></label>
+            <input type="text" placeholder="{% trans "Enter Comment" %}" name="comment" required>
+            <br><button type="submit">{% trans "Send" %}</button>
+        </form>
+    {% endif %}
+    <div id="map" style="width:400px;height:400px;background:yellow"></div>
+<script>
+function myMap() {
+    var aux = "{{parking.latitude}}".replace(",",".")
+    var latitude = parseFloat(aux)
+    aux = "{{parking.longitude}}".replace(",",".")
+    var longitude = parseFloat(aux)
+    var mapOptions = {
+        center: new google.maps.LatLng(latitude, longitude),
+        zoom: 16,
+        mapTypeId: google.maps.MapTypeId.HYBRID
+    }
+    var map = new google.maps.Map(document.getElementById("map"), mapOptions);
+}
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDO8XL1J4L-A1itAPiVntAmd5osP0apZFI&callback=myMap"></script>
+    {% endblock %}

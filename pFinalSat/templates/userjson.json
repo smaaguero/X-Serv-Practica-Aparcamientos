@@ -1,0 +1,20 @@
+{
+    "parkings": {
+        {% for parkingSelected in parkingsSelected%}
+        {
+            "idNumber": "{{parkingSelected.parking.idNumber}}"
+            "name": "{{parkingSelected.parking.name}}"
+            "description": "{{parkingSelected.parking.description}}"
+            "url": "{{parkingSelected.parking.url}}"
+            "phoneNumber": "{{parkingSelected.parking.phoneNumber}}"
+            "mail": "{{parkingSelected.parking.mail}}"
+            "latitude": "{{parkingSelected.parking.latitude}}"
+            "longitude": "{{parkingSelected.parking.longitude}}"
+            "neighborhood": "{{parkingSelected.parking.neighborhood}}"
+            "district": "{{parkingSelected.parking.district}}"
+            "accessibility": "{{parkingSelected.parking.accessibility}}"
+            "numberOfComments": "{{parkingSelected.parking.numberOfComments}}"
+        },
+        {% endfor %}
+    }
+}
